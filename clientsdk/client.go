@@ -98,26 +98,26 @@ func (c *client) DomainsGet() ([]string, error) {
 }
 
 func (c *client) DomainCreate() error {
-	url := c.url + "/domains"
-	resp, err := POST(url, c.token, nil)
-	if err != nil {
-		log.Printf("GetAllDomains: %v\n", err)
-		return nil, err
-	}
+	// url := c.url + "/domains"
+	// resp, err := POST(url, c.token, nil)
+	// if err != nil {
+	// 	log.Printf("GetAllDomains: %v\n", err)
+	// 	return nil, err
+	// }
 
-	var domains []RpcDomain
-	err = json.Unmarshal(resp, &domains)
-	if err != nil {
-		log.Printf("GetAllDomains: Unmarshal %v\n", err)
-		return nil, err
-	}
+	// var domains []RpcDomain
+	// err = json.Unmarshal(resp, &domains)
+	// if err != nil {
+	// 	log.Printf("GetAllDomains: Unmarshal %v\n", err)
+	// 	return nil, err
+	// }
 
-	var names []string
-	for _, domain := range domains {
-		names = append(names, domain.Name)
-	}
+	// var names []string
+	// for _, domain := range domains {
+	// 	names = append(names, domain.Name)
+	// }
 
-	return names, nil
+	return nil
 }
 
 func (c *client) Joe() (string, error) {
